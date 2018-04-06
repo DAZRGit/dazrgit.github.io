@@ -30,9 +30,9 @@ function init() {
     
     // JSON
     var json = [{
-        "title": "Ceremonia - Por determinar",
-        "lat": 40.657946,
-        "lng":  -3.766430,
+        "title": "Ceremonia - Basílica de Nuestra señora de Colmenar Viejo",
+        "lat":  40.657681, 
+        "lng":  -3.766327,
     }, {
         "title": "Fiesta - Por determinar",
         "lat": 40.437715, 

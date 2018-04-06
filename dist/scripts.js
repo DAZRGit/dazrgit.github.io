@@ -749,9 +749,9 @@ function init() {
     
     // JSON
     var json = [{
-        "title": "Ceremonia - Por determinar",
-        "lat": 40.657946,
-        "lng":  -3.766430,
+        "title": "Ceremonia - Basílica de Nuestra señora de Colmenar Viejo",
+        "lat":  40.657681, 
+        "lng":  -3.766327,
     }, {
         "title": "Fiesta - Por determinar",
         "lat": 40.437715, 
@@ -920,7 +920,7 @@ google.maps.event.addDomListener(window, 'load', init);
 	};
 
 	// Set the date we're counting down to
-	var countDownDate = new Date("Jun 23, 2019 12:00:00").getTime();
+	var countDownDate = new Date("Jun 29, 2019 13:00:00").getTime();
 
 	// Update the count down every 1 second
 	var x = setInterval(function() {
