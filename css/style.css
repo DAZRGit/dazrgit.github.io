@@ -607,19 +607,19 @@ figure {
   background: #F69D9D;
 }
 
-#fh5co-countdown .countdown {
+.countdown {
   margin-bottom: 0;
   font-size: 80px;
-  color: #fff;
+  color: #F69D9D;
 }
 
-#fh5co-countdown .countdown span {
+.countdown span {
   margin: 0 30px;
   display: inline-block;
   font-family: "Montez", cursive;
 }
 
-#fh5co-countdown .countdown small {
+.countdown small {
   display: block;
   font-size: 16px;
   font-family: "Open Sans", Arial, sans-serif;
