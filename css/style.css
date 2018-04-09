@@ -607,23 +607,22 @@ figure {
   background: #F69D9D;
 }
 
- .countdown {
+#fh5co-countdown .countdown {
   margin-bottom: 0;
   font-size: 80px;
-  color: #F69D9D;
+  color: #fff;
 }
 
- .countdown span {
+#fh5co-countdown .countdown span {
   margin: 0 30px;
   display: inline-block;
   font-family: "Montez", cursive;
 }
 
- .countdown small {
+#fh5co-countdown .countdown small {
   display: block;
   font-size: 16px;
   font-family: "Open Sans", Arial, sans-serif;
-  color: #F69D9D;
 }
 
 .couple-wrap {
@@ -917,7 +916,7 @@ figure {
 
 #footer h2 {
   color: #fff;
-  font-size: 55px;
+  font-size: 60px;
 }
 
 .btn {

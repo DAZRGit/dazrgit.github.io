@@ -747,6 +747,9 @@ function init() {
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
     
+    //Create and open InfoWindow.
+    var infoWindow = new google.maps.InfoWindow();
+
     // JSON
     var json = [{
         "title": "Ceremonia - Basílica de Nuestra señora de Colmenar Viejo",
@@ -772,6 +775,15 @@ function init() {
             title: data.title,
             icon: 'images/loc.png'
         });
+
+        //Attach click event to the marker.
+        (function (marker, data) {
+            google.maps.event.addListener(marker, "click", function (e) {
+                //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                infoWindow.setContent("<div style = 'width:200px;min-height:40px'>" + "<a href='http://maps.google.com?q="+data.lat+","+data.lng+"'>"+data.title +"</a>"+ "</div>");
+                infoWindow.open(map, marker);
+            });
+        })(marker, data);
     }
      //  Fit these bounds to the map
     var bounds = new google.maps.LatLngBounds();
