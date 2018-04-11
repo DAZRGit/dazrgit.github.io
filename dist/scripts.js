@@ -935,6 +935,7 @@ google.maps.event.addDomListener(window, 'load', init);
 
 	// Set the date we're counting down to
 	var countDownDate = new Date("Jun 29, 2019 13:00:00").getTime();
+	var countDownEndDate = new Date("Jun 30, 2018 13:00:00").getTime();
 
 	// Update the count down every 1 second
 	var x = setInterval(function() {
@@ -944,6 +945,7 @@ google.maps.event.addDomListener(window, 'load', init);
 
 	// Find the distance between now an the count down date
 	var distance = countDownDate - now;
+	var distanceEnd = countDownEndDate - now;
 
 	// Time calculations for days, hours, minutes and seconds
 	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -962,9 +964,13 @@ google.maps.event.addDomListener(window, 'load', init);
 	document.getElementById("seconds").innerHTML = seconds + " <small>seconds</small> ";
 
 	// If the count down is finished, write some text 
-	if (distance < 0) {
+	if (distance < 0 && distanceEnd > 0) {
 	 clearInterval(x);
-	 document.getElementById("demo").innerHTML = "The Wedding Ceremony is Over";
+	 document.getElementById("demo").innerHTML = "¡¡La boda empieza!!!";;
+	}
+	else if(distance <0){
+	 clearInterval(x);
+	 document.getElementById("demo").innerHTML = "La boda ha terminado";
 	}
 	}, 1000);
 
