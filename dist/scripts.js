@@ -794,7 +794,10 @@ function init() {
     }
     map.fitBounds(bounds);    
 }
-google.maps.event.addDomListener(window, 'load', init);
+if (typeof google != 'undefined')
+{
+    google.maps.event.addDomListener(window, 'load', init);
+}
 ;(function () {
 	
 	'use strict';
