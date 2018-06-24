@@ -39,9 +39,9 @@ function init() {
         "lat":  40.657681, 
         "lng":  -3.766327,
     }, {
-        "title": "Fiesta - Por determinar",
-        "lat": 40.437715, 
-        "lng": -3.637652,
+        "title": "Fiesta - Finca Besaeda",
+        "lat": 40.669465,  
+        "lng": -4.010696,
     }]
     var arr = [];
     // Loop the JSON
