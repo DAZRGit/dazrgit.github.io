@@ -758,9 +758,9 @@ function init() {
         "lat":  40.657681, 
         "lng":  -3.766327,
     }, {
-        "title": "Fiesta - Finca Besaeda",
-        "lat": 40.669465,  
-        "lng": -4.010696,
+        "title": "Fiesta - Finca La Dehesilla",
+        "lat": 40.725285,
+        "lng": -3.563794,
     }]
     var arr = [];
     // Loop the JSON
