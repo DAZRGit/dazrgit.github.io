@@ -1,6 +1,18 @@
 ;(function () {
 	
 	'use strict';
+	// Service Worker
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+		  navigator.serviceWorker.register('/js/service-worker.js').then(function(registration) {
+			// Registration was successful
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+		  }).catch(function(err) {
+			// registration failed :(
+			console.log('ServiceWorker registration failed: ', err);
+		  });
+		});
+	  }
 
 	// iPad and iPod detection	
 	var isiPad = function(){
