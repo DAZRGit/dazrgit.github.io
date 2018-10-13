@@ -20,7 +20,7 @@ gulp.task('sass', function () {
     .pipe(sass({ outputStyle: 'expanded' }))
     .on('error', gutil.log)
     .pipe(gulp.dest(outputCSSDir))
-    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 gulp.task('js', function () {
@@ -59,13 +59,14 @@ gulp.task('watch', function () {
 gulp.task('connect', function () {
   connect.server({
     root: '.',
+    host: '0.0.0.0',
     livereload: true
-  })
+  });
 });
 
 gulp.task('html', function () {
   gulp.src(htmlSources)
-    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 gulp.task('default', ['html', 'js', 'sass', 'connect', 'watch']);
