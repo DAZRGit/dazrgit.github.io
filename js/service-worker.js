@@ -54,8 +54,14 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.open(CACHE_NAME).then(function(cache) {
       console.log("Try to match: "+ event.request.url);
-      return cache.match(event.request).then(function(response) {
-        return response || fetch(event.request);
+      return cache.match(event.request).then(function(resp) {
+        return resp || fetch(event.request).then(function(response) {
+          var responseClone = response.clone();
+          caches.open(CACHE_NAME).then(function(cache) {
+            cache.put(event.request, responseClone);
+          });  
+          return response;
+        });
       }).catch(function() {
         // If both fail, show a generic fallback:
         return caches.match('/offline.html');
