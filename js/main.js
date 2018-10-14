@@ -202,3 +202,14 @@
 
 
 }());
+
+window.addEventListener('beforeinstallprompt', function(e){    
+    // show your custom button
+    
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    // no matter what, the snack-bar shows in 68 (beta 06/16/2018 11:05 AM)
+    e.preventDefault();
+    
+    // Save the prompt so it can be displayed when the user wants
+    this.deferredPrompt = e;    
+}); 

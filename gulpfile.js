@@ -70,3 +70,14 @@ gulp.task('html', function () {
 });
 
 gulp.task('default', ['html', 'js', 'sass', 'connect', 'watch']);
+
+gulp.task('generate-service-worker', function(callback) {
+  var path = require('path');
+  var swPrecache = require('sw-precache');
+  var rootDir = 'app';
+
+  swPrecache.write(path.join(rootDir, 'sw.js'), {
+    staticFileGlobs: ["." + '/**/*.{js,html,css,png,jpg,gif}'],
+    stripPrefix: rootDir
+  }, callback);
+});
