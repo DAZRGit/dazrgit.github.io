@@ -875,6 +875,13 @@ figure {
   height: 500px;
   position: relative;
 }
+#map div div div:last-child div:last-child div div div:nth-child(3) {
+  left: 0 !important;
+  top: 20px !important;
+  border-top-width: 24px;
+  position: absolute;
+  transform: rotate(90deg);
+}
 
 @media screen and (max-width: 768px) {
   #map {

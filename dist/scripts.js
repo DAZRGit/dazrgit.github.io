@@ -750,7 +750,9 @@ function init() {
     var map = new google.maps.Map(mapElement, mapOptions);
     
     //Create and open InfoWindow.
-    var infoWindow = new google.maps.InfoWindow();
+    var infoWindow = new google.maps.InfoWindow({
+        pixelOffset: new google.maps.Size(140,80)
+    });
 
     // JSON
     var json = [{
@@ -782,7 +784,7 @@ function init() {
         (function (marker, data) {
             google.maps.event.addListener(marker, "click", function (e) {
                 //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
-                infoWindow.setContent("<div style = 'width:200px;min-height:40px'>" + "<a href='http://maps.google.com?q="+data.lat+","+data.lng+"'>"+data.title +"</a>"+ "</div>");
+                infoWindow.setContent("<div style = 'width:150px;height:50px'>" + "<a href='http://maps.google.com?q="+data.lat+","+data.lng+"'>"+data.title +"</a>"+ "</div>");                
                 infoWindow.open(map, marker);
             });
         })(marker, data);
@@ -1955,8 +1957,14 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.open(CACHE_NAME).then(function(cache) {
       console.log("Try to match: "+ event.request.url);
-      return cache.match(event.request).then(function(response) {
-        return response || fetch(event.request);
+      return cache.match(event.request).then(function(resp) {
+        return resp || fetch(event.request).then(function(response) {
+          var responseClone = response.clone();
+          caches.open(CACHE_NAME).then(function(cache) {
+            cache.put(event.request, responseClone);
+          });  
+          return response;
+        });
       }).catch(function() {
         // If both fail, show a generic fallback:
         return caches.match('/offline.html');
