@@ -1269,3 +1269,9 @@ figure {
   z-index: 9999;
   background: url(../images/hourglass.svg) center no-repeat #222222;
 }
+.square {
+  position: relative;
+  margin: 0 2% 0 2%;
+  outline: 2px solid #848484;
+ }
+ 
