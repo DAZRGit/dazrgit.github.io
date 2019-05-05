@@ -48,9 +48,15 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 	
+	<!--Map Google-->
 	<link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 	
+	<!--Map Leaflet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+	crossorigin=""/>
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -129,63 +135,34 @@
 			<div class="container">
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center heading-section">
-						<h2>Los padrinos</h2>
-					</div>
-				</div>
-				<div class="row row-bottom-padded-lg">
-					<div class="col-md-3 text-center animate-box">
-						<div class="groom-men">
-							<img src="images/groom-men-1.jpg" class="img-responsive" alt="padrino">
-							<h3>xxxxxx</h3>
-						</div>
-					</div>
-					<div class="col-md-3 text-center animate-box">
-						<div class="groom-men">
-							<img src="images/groom-men-2.jpg" class="img-responsive" alt="padrino">
-							<h3>xxxxxx</h3>
-						</div>
-					</div>
-					<div class="col-md-3 text-center animate-box">
-						<div class="groom-men">
-							<img src="images/groom-men-3.jpg" class="img-responsive" alt="padrino">
-							<h3>xxxxxx</h3>
-						</div>
-					</div>
-					<div class="col-md-3 text-center animate-box">
-						<div class="groom-men">
-							<img src="images/groom-men-4.jpg" class="img-responsive" alt="padrino">
-							<h3>xxxxxx</h3>
-						</div>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center heading-section">
-						<h2>Las madrinas</h2>
+						<h2>Nuestras recomendaciones de alojamiento</h2>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-3 text-center animate-box">
-						<div class="groom-men">
-							<img src="images/bridesmaid-1.jpg" class="img-responsive" alt="madrina">
-							<h3>xxxxxx</h3>
+					<div class="col-md-12">
+						<div id="mapid" class="fh5co-map"></div>
+					</div>
+				</div>
+				</div>
+				<div style="height:30px"></div>
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-6 text-center animate-box">
+						<div class="wedding-events">
+							<div class="desc">
+								<h3>Hoteles y Hostales</h3>
+								<p><strong>@ El Molar - Marid - España</strong></p>
+								<p><a href="https://www.hostalalcudia.com/">Hostal Alcudia Sierra norte</a></p>
+								<p><a href="http://www.hostalazul.es/">Hostal Azul</a></p>
+							</div>
 						</div>
 					</div>
-					<div class="col-md-3 text-center animate-box">
-						<div class="groom-men">
-							<img src="images/bridesmaid-2.jpg" class="img-responsive" alt="madrina">
-							<h3>xxxxxx</h3>
-						</div>
-					</div>
-					<div class="col-md-3 text-center animate-box">
-						<div class="groom-men">
-							<img src="images/bridesmaid-3.jpg" class="img-responsive" alt="madrina">
-							<h3>xxxxxx</h3>
-						</div>
-					</div>
-					<div class="col-md-3 text-center animate-box">
-						<div class="groom-men">
-							<img src="images/bridesmaid-4.jpg" class="img-responsive" alt="madrina">
-							<h3>xxxxxx</h3>
+					<div class="col-md-6 text-center animate-box">
+						<div class="wedding-events">
+							<div class="desc">
+								<h3>Casas rurales</h3>
+								<p><strong>@Alrededores - Madrid - España</strong></p>
+								<p>Si lo que quereís es dormir en una casa y compartirla con más invitados avisarnos para poneros en contacto y recomendaros.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -241,6 +218,14 @@
 	</div>
 	<!-- END fh5co-wrapper -->
 
+	
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIqD2qESZq2-aVJhF0zDRuZuOQPipM7TM"></script>
+
+	<!-- Leaflet Map -->
+	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
 	<!-- jQuery -->
 	<script src="dist/scripts.min.js"></script>
 	</body>
