@@ -50,6 +50,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 	
+	<!--Map Leaflet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+	crossorigin=""/>
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -134,7 +139,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<div id="map" class="fh5co-map"></div>
+						<div id="mapid" class="fh5co-map"></div>
 					</div>
 				</div>
 				<div style="height:30px"></div>
@@ -214,9 +219,11 @@
 	</div>
 	<!-- END fh5co-wrapper -->
 
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIqD2qESZq2-aVJhF0zDRuZuOQPipM7TM"></script>
-	<!-- jQuery -->
+	<!-- Leaflet Map -->
+	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+   <!-- jQuery -->
 	<script src="dist/scripts.min.js"></script>
 	</body>
 </html>
